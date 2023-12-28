@@ -1,10 +1,11 @@
 import express from 'express';
 import { createServer } from 'http';
-import { config } from 'dotenv';
+import { config as dotenvConfig} from 'dotenv';
 import { Server } from 'socket.io';
 
-// Express App //
+// Express App & dotenv configs //
 const expressApp = express()
+dotenvConfig();
 
 // SERVER //
 const server = createServer(expressApp);
