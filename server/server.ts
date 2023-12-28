@@ -1,6 +1,19 @@
 import express from 'express';
-const app = express()
-const port = 8080
+import { createServer } from 'http';
+import { config } from 'dotenv';
+import { Server } from 'socket.io';
 
-app.get('/', (req, res) => res.send('Hello World!'))
-app.listen(port, () => console.log(`Example app listening on port ${port}!`))
+// Express App //
+const expressApp = express()
+
+// SERVER //
+const server = createServer(expressApp);
+
+// WebSocket IO App //
+const wsIO = new Server(server); 
+
+
+server.listen(process.env.PORT, () => console.log(`Example app listening on port ${8080}!`))
+
+
+export { wsIO };
