@@ -1,4 +1,8 @@
 {
+  "ts-node": {
+    "esm": true,
+    "experimentalSpecifierResolution": "node"
+  },
   "compilerOptions": {
     /* Visit https://aka.ms/tsconfig to read more about this file */
 
@@ -107,3 +111,4 @@
     "skipLibCheck": true                                 /* Skip type checking all .d.ts files. */
   }
 }
+
