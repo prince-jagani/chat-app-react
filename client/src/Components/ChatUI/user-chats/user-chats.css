@@ -1,0 +1,24 @@
+.user-chats-ui {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.chat-user-list {
+    width: 362px;
+    margin-left: 0px;
+    margin-right: 6px;
+}
+
+.chatting-area {
+    flex-grow: 1;
+    margin-left: 6px;
+    background-repeat: repeat;
+    background-image: none;
+    background-position: 0%;
+    background-size: auto;
+    background-attachment: scroll;
+    background-origin: padding-box;
+    background-clip: border-box;
+    background-color: white;
+}
