@@ -8,6 +8,8 @@
     width: 362px;
     margin-left: 0px;
     margin-right: 6px;
+    background-color: white;
+    border-radius: 6px;
 }
 
 .chatting-area {
@@ -21,4 +23,5 @@
     background-origin: padding-box;
     background-clip: border-box;
     background-color: white;
+    border-radius: 6px;
 }
