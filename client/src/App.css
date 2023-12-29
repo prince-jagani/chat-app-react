@@ -1,7 +1,3 @@
-:root {
-    --color-primary-background: #F5F3F5;
-}
-
 .App {
     text-align: center;
     width: 100vw;
@@ -21,11 +17,4 @@
     flex-grow: 1;
     position: relative;
     background-color: #CDCBCCAA;
-    background-image: none;
-    background-repeat: repeat;
-    background-position: 0%;
-    background-size: auto;
-    background-attachment: scroll;
-    background-origin: padding-box;
-    background-clip: border-box;
 }
