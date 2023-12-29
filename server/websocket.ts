@@ -8,7 +8,6 @@ const activeSockets: Array<{
     socketId: string
 }> = [];
 
-
 webSocket.on("connection", (socket) => {
     setupWebsocketConnection(socket);
 })
