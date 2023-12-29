@@ -1,14 +1,17 @@
 import React from 'react';
 import './App.css';
-import { TestComponent } from './Components/test-component/test-component';
+import { UserChats } from './Components/ChatUI/user-chats/user-chats';
+
 
 function App() {
-  return (
-    <div className="App">
-     <h1>chat App</h1>
-     <TestComponent />
-    </div>
-  );
+    return (
+        <div className="App">
+            <div className="navigation-panel" />
+            <div className="main-container">
+                <UserChats />
+            </div>
+        </div>
+    );
 }
 
 export default App;
