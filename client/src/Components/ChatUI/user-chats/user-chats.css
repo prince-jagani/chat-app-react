@@ -10,6 +10,8 @@
     margin-right: 6px;
     background-color: white;
     border-radius: 6px;
+    display: flex;
+    flex-direction: column;
 }
 
 .chatting-area {
@@ -23,5 +25,109 @@
     background-origin: padding-box;
     background-clip: border-box;
     background-color: white;
+    border: 0px solid black;
     border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.chat-search-bar {
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border-bottom: 1px solid #B1B1B3;
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+
+.list {
+    flex-grow: 1;
+    padding: 6px;
+}
+
+.new-cha-btm {
+    width: 24px;
+    height: 24px;
+    margin-left: 12px;
+}
+
+.user-search-input {
+    height: 30px;
+    border-radius: 16px;
+    border: 0px solid black;
+    padding-left: 16px;
+    padding-right: 12px;
+    background-color: rgba(205, 203, 204, 0.75);
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    line-height: 30px;
+    flex-grow: 1;
+    margin: 12px;
+}
+
+.inp-field-search {
+    background-color: rgba(255, 255, 255, 0);
+    border: 0px solid #4D2F2F;
+    height: 16px;
+    outline: none;
+    flex-grow: 1;
+    font-size: 16px;
+    line-height: 16px;
+    margin-top: 3px;
+}
+
+.chat-user-title-bar {
+    width: 90%;
+    margin: 12px;
+    position: sticky;
+    top: 12px;
+    border: 0px solid black;
+    padding: 6px;
+    display: flex;
+    align-items: center;
+    border-radius: 38px;
+    background-color: white;
+    box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.25);
+}
+
+.avatar-main {
+    width: 64px;
+    height: 64px;
+    border-radius: 32px;
+}
+
+.send-message-controls {
+    width: 100%;
+    padding: 6px 0px;
+    border: 0px solid black;
+    box-shadow: 0 -3px 6px rgba(0, 0, 0, 0.25);
+    display: flex;
+    align-items: center;
+}
+
+.main-chat-box {
+    flex-grow: 1;
+}
+
+.message-ctrl-input {
+    margin: 0 12px;
+    padding: 0;
+    font-size: 16px;
+    resize: none;
+    outline: none;
+    border-radius: 6px;
+    border: none;
+    flex-grow: 1;
+    max-height: 128px;
+}
+
+.message-ctrl-send-btn {
+    border: none;
+    padding: 6px 18px;
+    display: flex;
+    margin: 6px;
 }
