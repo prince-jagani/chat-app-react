@@ -1,4 +1,4 @@
-import { IconMessageCirclePlus, IconSearch, IconSend } from '@tabler/icons-react';
+import { IconMessageCirclePlus, IconMicrophone, IconMoodSmile, IconPaperclip, IconSearch, IconSend } from '@tabler/icons-react';
 import './user-chats.css';
 import React, { useEffect, useRef, useState } from 'react';
 
@@ -46,6 +46,8 @@ export const UserChats: React.FC<UserChatsProps> = ({ className = '' }) => {
                 </div>
                 <div className="main-chat-box" />
                 <div className="send-message-controls">
+                    <IconPaperclip style={{ marginLeft: 16 }} />
+                    <IconMoodSmile style={{ margin: "0 12px" }} />
                     <textarea className="message-ctrl-input scrollable-div"
                         value={messageText}
                         ref={messageFieldRef}
@@ -61,6 +63,7 @@ export const UserChats: React.FC<UserChatsProps> = ({ className = '' }) => {
                             else setResizeMessageField(true);
                         }}
                     />
+                    <IconMicrophone style={{ margin: "0 16px" }} />
                     <button
                         type="submit"
                         className="message-ctrl-send-btn"><IconSend /></button>
