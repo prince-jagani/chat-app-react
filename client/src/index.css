@@ -1,8 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Kanit:wght@500&display=swap');
+
+* {
+  font-family: 'Josefin Sans', sans-serif;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -10,4 +13,33 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+
+/* Scrollbar */
+.scrollable-div {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  scrollbar-color: #274690 transparent;
+}
+
+
+.scrollable-div::-webkit-scrollbar {
+  width: 0;
+  transition: .5s;
+}
+
+.scrollable-div:hover::-webkit-scrollbar {
+  width: 4px;
+  transition: .5s;
+}
+
+.scrollable-div::-webkit-scrollbar-thumb {
+  background: #274690;
+  border-radius: 4px;
+}
+
+.scrollable-div::-webkit-scrollbar-thumb:hover {
+  background: #132245;
+  border-radius: 2px;
 }
