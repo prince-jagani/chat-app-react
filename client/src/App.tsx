@@ -1,35 +1,33 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { Icon123 } from "@tabler/icons-react";
+import { useState } from "react";
+import Sidebar from "./assets/Sidebar";
+
+
+const pages = [
+  { id: 'chat', icon: <Icon123 size={24} /> },
+  { id: 'contacts', icon: <Icon123 size={24} /> },
+  { id: 'settings', icon: <Icon123 size={24} /> },
+];
 
 function App() {
-  const [count, setCount] = useState(0)
+
+  const [activePage, setActivePage] = useState('chat');
+
+  const handleChangePage = (pageId: string) => {
+    setActivePage(pageId);
+  };
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className="flex h-screen w-screen">
+      <Sidebar pages={pages} activePage={activePage} onChangePage={handleChangePage} />
+      <div className="flex-1 p-4 bg-gray-300">
+        {/* Render content based on the activePage */}
+        {activePage === 'chat' && <div>Chat Page Content</div>}
+        {activePage === 'contacts' && <div>Contacts Page Content</div>}
+        {activePage === 'settings' && <div>Settings Page Content</div>}
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    </div>
+  );
 }
 
 export default App
