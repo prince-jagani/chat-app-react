@@ -1,7 +1,8 @@
 import { Icon123 } from "@tabler/icons-react";
 import { useState } from "react";
-import Sidebar from "./assets/Sidebar";
 
+import Sidebar from "./assets/Sidebar";
+import UserChatBox from "./Components/UserChatBox";
 
 const pages = [
   { id: 'chat', icon: <Icon123 size={24} /> },
@@ -13,18 +14,23 @@ function App() {
 
   const [activePage, setActivePage] = useState('chat');
 
+
   const handleChangePage = (pageId: string) => {
     setActivePage(pageId);
   };
 
   return (
     <div className="flex h-screen w-screen">
+      {/* Side Navigation Panel */}
       <Sidebar pages={pages} activePage={activePage} onChangePage={handleChangePage} />
-      <div className="flex-1 p-4 bg-gray-300">
-        {/* Render content based on the activePage */}
-        {activePage === 'chat' && <div>Chat Page Content</div>}
-        {activePage === 'contacts' && <div>Contacts Page Content</div>}
-        {activePage === 'settings' && <div>Settings Page Content</div>}
+
+      {/* Main Area */}
+      <div className="flex-1 p-4 bg-gray-300 flex">
+        {/* Add Main Content */}
+
+        <UserChatBox />
+
+        {/* End */}
       </div>
     </div>
   );
