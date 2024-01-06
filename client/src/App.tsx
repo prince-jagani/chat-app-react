@@ -2,7 +2,8 @@ import { Icon123 } from "@tabler/icons-react";
 import { useState } from "react";
 
 import Sidebar from "./assets/Sidebar";
-import UserChatBox from "./Components/UserChatBox";
+// import UserChatBox from "./Components/ChatUI/UserChatBox";
+import Login from "./Components/Account/Login";
 
 const pages = [
   { id: 'chat', icon: <Icon123 size={24} /> },
@@ -28,7 +29,8 @@ function App() {
       <div className="flex-1 p-4 bg-gray-300 flex">
         {/* Add Main Content */}
 
-        <UserChatBox />
+        {/* <UserChatBox /> */}
+        <Login/>
 
         {/* End */}
       </div>

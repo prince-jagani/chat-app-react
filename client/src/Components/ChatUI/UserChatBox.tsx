@@ -1,5 +1,5 @@
 import React from 'react'
-import ResizeBox from '../assets/ResizeBox'
+import ResizeBox from '../../assets/ResizeBox'
 import { Button, Input, ScrollShadow } from '@nextui-org/react';
 import { IconMessageCirclePlus } from '@tabler/icons-react'
 
