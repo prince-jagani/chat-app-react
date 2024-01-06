@@ -2,12 +2,9 @@ import React, { useState } from "react";
 import { Button, Input, Link } from "@nextui-org/react";
 
 type loginType = {
-  name: string,
-  username: string,
+  name?: string,
+  username?: string,
   email: string,
-  password: string
-} | {
-  email: string, 
   password: string
 }
 
@@ -31,39 +28,39 @@ const UserChatBox: React.FC = () => {
         <h1 className="text-4xl">Login</h1>
         <div className="manual-login w-1/3">
           <form>
-          <Input
-            isRequired
-            type="email"
-            label="Email"
-            className="m-4"
-            value={loginFormData?.email}
-            onChange={(e) => {
-              setLoginFormData(data => ({...data, email: e.target.value}))
-            }}
-          />
-          <Input
-            isRequired
-            type="password"
-            label="Password"
-            className="m-4"
-            value={loginFormData?.password}
-            onChange={(e) => {
-              setLoginFormData(data => ({...data, password: e.target.value}))
-            }}
-          />
-          {loginType ? (
-            <></>
-          ) : (
             <Input
               isRequired
-              type="name"
-              label="Name"
+              type="email"
+              label="Email"
               className="m-4"
-              value={loginFormData?.}
+              value={loginFormData?.email}
               onChange={(e) => {
-                setLoginFormData(data => ({...data, email: e.target.value}))
+                setLoginFormData(data => ({ ...data, email: e.target.value }))
               }}
             />
+            <Input
+              isRequired
+              type="password"
+              label="Password"
+              className="m-4"
+              value={loginFormData?.password}
+              onChange={(e) => {
+                setLoginFormData(data => ({ ...data, password: e.target.value }))
+              }}
+            />
+            {loginType ? (
+              <></>
+            ) : (
+              <Input
+                isRequired
+                type="name"
+                label="Name"
+                className="m-4"
+                value={loginFormData?.name}
+                onChange={(e) => {
+                  setLoginFormData(data => ({ ...data, email: e.target.value }))
+                }}
+              />
             )}
           </form>
           {loginType ? <Link className="m-4">Forgot Password?</Link> : <></>}
@@ -78,6 +75,7 @@ const UserChatBox: React.FC = () => {
               <Link
                 onClick={() => {
                   setLoginType(false);
+                  setLoginFormData(data => ({ ...data, username: '', name: '' }))
                 }}
               >
                 Register Now!
@@ -89,6 +87,7 @@ const UserChatBox: React.FC = () => {
               <Link
                 onClick={() => {
                   setLoginType(true);
+                  setLoginFormData(data => ({ email: data.email, password: data.password }))
                 }}
               >
                 Login Now!
